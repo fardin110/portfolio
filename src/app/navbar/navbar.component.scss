@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+
+  }
+
+  #navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px; /* Increase the height of the navbar */
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a glass effect to the background */
+    backdrop-filter: blur(5px); /* Add a blur effect for further glass effect */
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 80px; /* Center the text vertically */
+  }
+  
+  #navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  #navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Add transition for border-bottom */
+    border-bottom: 2px solid transparent; /* Initially hide the underline */
+  }
+  
+  #navbar ul li a:hover {
+    color: #ff0000;
+    border-bottom-color: #ff0000; /* Show underline on hover */
+  }
+  
+  #navbar ul li a.active {
+    color: #ff0000;
+    border-bottom-color: #ff0000; /* Show underline on active */
+  }
+  /* Style for the hamburger icon */
+.menu-toggle {
+  display: none; /* Hide the hamburger icon by default */
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  padding: 20px;
+}
+
+/* Media query for smartphones */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the hamburger icon on small screens */
+  }
+
+  #navbar ul {
+    display: none;
+    position: absolute;
+    top: 80px; /* Adjust according to your navbar height */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  #navbar ul.show {
+    display: block;
+  }
+
+  #navbar ul li {
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+  }
+}

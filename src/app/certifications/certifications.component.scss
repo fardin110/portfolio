@@ -1,0 +1,102 @@
+.main-section {
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .section-heading {
+    margin-top: 8%;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .certification-entry {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #482121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .certification-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .certificate-logo img {
+    width: 100px; /* Adjust image width as needed */
+    height: auto;
+  }
+  .certificate-image img{
+    width: 210px; /* Adjust image width as needed */
+    height: auto;
+  }
+  .certification-info {
+    margin-left: 20px;
+  }
+  
+  .certification-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .certification-info p {
+    margin-bottom: 5px;
+  }
+  
+  .verify-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for anchor tag */
+    display: inline-block; /* Ensure the button is displayed as a block element */
+    transition: background-color 0.3s ease;
+}
+
+.verify-button:hover {
+    background-color: #000000;
+    border-color: #fff;
+}
+/* Media query for responsive layout */
+@media screen and (max-width: 768px) {
+  .container {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+  .certification-entry {
+      flex-direction: column; /* Change to vertical layout for smaller screens */
+      padding: 15px; /* Adjust padding for better spacing */
+  }
+
+  .certification-details {
+      margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+
+  .certificate-logo img {
+      width: 80px; /* Adjust image width for smaller screens */
+  }
+
+  .certificate-image img {
+      width: 120px; /* Adjust image width for smaller screens */
+  }
+
+  .verify-button {
+      margin-top: 20px; /* Adjust top margin for better spacing */
+  }
+}

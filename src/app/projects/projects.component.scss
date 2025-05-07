@@ -1,0 +1,183 @@
+
+
+.portfolio-page {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 60px 20px; /* Adjust padding for better spacing */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height instead of height to ensure content visibility on smaller screens */
+
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center; /* Center projects horizontally */
+    flex-direction: row; /* Arrange projects horizontally */
+    gap: 10px; /* Space between projects */
+}
+.page-heading {
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 40px;
+}
+
+.subheading {
+    margin: px 20px;
+    text-align: center;
+    font-size: 1.2rem; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust space below subheading */
+    color: #999999;
+}
+
+.project-number {
+    text-align: center;
+    font-size: 1.8rem; /* Increase font size */
+    margin-bottom: 20px; /* Increase space below project number */
+}
+
+.project {
+    position: relative;
+    width: 80%; /* Reduce project width for better fit on smaller screens */
+    margin: 0 auto; /* Center the project horizontally */
+    text-align: center; /* Center the text content horizontally */
+    display: flex; /* Use flexbox for centering vertically */
+    flex-direction: column; /* Arrange contents vertically */
+    align-items: center; /* Center contents horizontally */
+    justify-content: center; /* Center contents vertically */
+}
+
+
+.project-image {
+    width: 100%;
+    border: 10px solid transparent;
+    transition: transform 0.3s ease; /* Add zoom transition */
+    border-color: #000000;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.project-image:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+    /* Border color on hover */
+}
+
+.description {
+    position: absolute;
+    margin-top: 10%;
+    top: 42%;
+    text-align: left; /* Align contents to the left */
+    width: 100%; /* Make the description wider */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .description {
+    opacity: 1; /* Fade in description on hover */
+}
+
+.glow-on-hover {
+    display: block;
+    margin: 10px auto; /* Center the button horizontally and add margin at the top */
+    padding: 10px;
+    width: 40%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #b40000; /* Adjust background color as needed */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px; /* Adjust border radius as needed */
+    text-decoration: none;
+    text-align: center; /* Center the text horizontally */
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Media query for smartphones */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Change to vertical layout for smaller screens */
+        align-items: center; /* Center projects horizontally */
+        justify-content: center; /* Center projects vertically */
+        gap: 10px; /* Adjust space between projects */
+    }
+
+    .project {
+        width: 80%; /* Reduce project width for better fit on smaller screens */
+        align-items: center; /* Center projects horizontally */
+        justify-content: center; /* Center projects vertically */
+    }
+    .description {
+        position: relative; /* Change position to relative */
+        margin-top: 0; /* Remove margin-top */
+        font-size: 0.9rem;
+        top: auto; /* Remove top positioning */
+        text-align: left; /* Center align the description */
+        width: 100%; /* Reduce width to fit smaller screens */
+        transform: translateY(0); /* Remove translateY transformation */
+        background-color: rgba(0, 0, 0, 0.7); /* Keep background color */
+        padding: 10px; 
+        color: #ffffff; 
+        opacity: 1; 
+        transition: none; 
+        line-height: 1.2;
+    }
+    .glow-on-hover {
+        width: 80%; /* Reduce button width for better fit on smaller screens */
+        max-width: 300px; /* Limit button width */
+    }
+}
+
