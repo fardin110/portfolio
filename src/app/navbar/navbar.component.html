@@ -1,0 +1,12 @@
+<nav id="navbar">
+    
+  <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+  <ul [class.show]="showMenu">
+      <li><a href="#home" (click)="hideMenu()">Home</a></li>
+      <li><a href="#projects" (click)="hideMenu()">Projects</a></li>
+      <li><a href="#resume" (click)="hideMenu()">Resume</a></li>
+      <li><a href="#certifications" (click)="hideMenu()">Certifications</a></li>
+      <li><a href="#about" (click)="hideMenu()">About</a></li>
+
+    </ul>
+  </nav>
